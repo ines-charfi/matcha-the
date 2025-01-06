@@ -1,30 +1,40 @@
 /* Parti Index */
-.liste {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    background-color: #FFFDEC;
-    
-}
 
-li {
-    border: 1px solid #86A788;
-    padding: 5px;
-    border-radius: 20%;
-    background-color: #86A788;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 hr {
-    width: 70%;
+  justify-content: center;
+  margin: 0 100px;
 }
 
+.liste {
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+}
+.Accueil {
+  background-image: url("/Photo/matcha\ 4.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 
+.titre {
+    margin: 200px;
+    display: flex;
+    justify-content: center;
+}
 
-
-
-
-
-
+.vente {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
 
 
 /* Parti CompteClient */
