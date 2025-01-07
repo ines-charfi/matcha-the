@@ -1,0 +1,287 @@
+
+/* RESET pour éviter les styles par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family:'Poppins';
+    background-image: url("./images/Green\ matcha\ moodboard.jpg");
+    background-size: cover; /* L'image couvre toute la page */
+    background-position: center; /* Centrer l'image */
+    background-attachment: fixed; /* L'image reste fixe lors du défilement */
+}
+
+
+/* Header avec navbar */
+header {
+    background-color: #2f855a;
+    padding: 20px 10px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 30 auto;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar li {
+    width: 150px;
+    height: 50%;
+    text-align: center;
+    margin: 30px 20px;
+    border: 100px;
+    background-color: rgb(240, 234, 228);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease;
+    
+  
+}
+
+.navbar a {
+    
+    color: rgb(1, 48, 13);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #724dc9;
+}
+
+/* Menu burger */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger .bar {
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul.active {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #2f855a;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar li {
+    margin: 10px 0;
+}
+
+section {
+    padding: 40px 20px;
+    text-align:center;
+    width: 100%;
+    height: 100%;
+    
+
+
+}
+
+
+.histoire  h1  {
+    
+    justify-content: center;
+    text-align: center;
+    color: #111b8b;
+    font-size: 2em;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; 
+   
+}
+
+.histoire  p{
+    color:rgb(9, 2, 50);
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    animation: fadeIn 2s ease-in-out;
+}
+.valeurs h1  {
+    display:flex;
+    width: 100%;
+    height: auto;
+   border: #ddecde;
+   border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    color: #111b8b;
+    font-size: 2em;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; 
+   
+}
+.valeurs p {
+    width: 100%;
+    height: 100%;
+    background-color: #ddecde;
+    box-sizing: content-box;
+    border-radius: 5px;
+    box-shadow: gray;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; 
+
+}
+.valeurs p:hover {
+    transform: translateX(-50px)
+}
+footer p{
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+ .histoire ul li {
+    text-align: justify;
+    height: 50%;
+    width: 30%;
+    display:grid;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #86A788;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; /* Applique la transition sur le transform */
+}
+
+/* Quand l'élément est survolé */
+.histoire li:hover {
+    transform: translateX(100px); /* Déplace l'élément de 100px vers la droite */
+
+
+}
+
+
+/* Media Queries pour rendre la page responsive */
+
+/* Sur mobile : Les sections prennent toute la largeur */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+    #histoire, #valeurs {
+        flex: none;
+        width: 100%;
+    }
+
+    h1, h2 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    ul li {
+        font-size: 1em;
+    }
+}
+
+/* Sur tablette et plus grand : les colonnes restent côte à côte */
+@media (min-width: 769px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .histoire, .valeurs {
+        flex: 1;
+    }
+
+
+h1, h2 {
+    color: rgb(5, 121, 121);
+    margin-bottom: 20px;
+    font-size: 2em;
+    animation: fadeIn 2s ease-in-out;
+}
+}
+/* Animation d'apparition */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #2f855a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Media Queries pour rendre la page responsive */
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        width: 100%;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+}
+
+/* Tablette et plus grand */
+@media (max-width: 1200px) {
+    .navbar ul {
+        justify-content: space-around;
+    }
+}
+
+/* Grand écran */
+@media (min-width: 1201px) {
+    .navbar ul {
+        justify-content: space-evenly;
+    }
+}
