@@ -4,26 +4,73 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./Assets/Poppins-Black.ttf);
+}
+
+@media (max-width: 450px) {
+  .crossbar {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .crossbar li:nth-child(1) {
+    display: none;
+  }
+
+  .sell {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  p {
+    text-align: center;
+    overflow-wrap: normal;
+  }
+
+  .footer1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .sidebar {
+    display: none;
+  }
 }
 
 .one {
-  background-color: #86A788;
+  background-color: #86a788;
   padding: 2em;
 }
 
 .crossbar {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
+
+.crossbar li:nth-child(2) {
+  font-size: 2em;
+}
+.crossbar li:nth-child(3) {
+}
+
 .sidebar {
-  background-color: #FFCFCF;
+  background-color: #ffcfcf;
 }
 .side {
   display: flex;
-  flex-direction: column;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
   justify-content: space-around;
   height: 100vh;
-  padding: 10px;
+  padding: 2.3em;
 }
 
 .main1 {
@@ -39,7 +86,7 @@ p {
   margin: 0.5em;
 }
 .best-seller {
-  background-color: #FFFDEC;
+  background-color: #fffdec;
 }
 
 .sell {
@@ -48,8 +95,7 @@ p {
 }
 
 footer {
-  background-color: #86A788;
-
+  background-color: #86a788;
 }
 
 main,
@@ -69,20 +115,22 @@ main,
   align-items: center;
 }
 
-.footer-left, .nav-footer {
+.footer-left,
+.nav-footer {
   display: flex;
   flex-direction: column;
   margin: 10px;
 }
 
-.footer-right, .adress {
+.footer-right,
+.adress {
   display: flex;
   flex-direction: column;
   align-items: center;
-  ;
 }
 
-.footer-left, .footer-right {
+.footer-left,
+.footer-right {
   align-content: center;
   align-items: center;
 }
@@ -90,28 +138,44 @@ main,
 input {
   padding: 10px;
   border-radius: 3px;
-  background-color: #FFFDEC;
-  color: #86A788;
+  background-color: #fffdec;
+  color: #86a788;
   border: none;
 }
 
 .crossbar li {
-  color: #FFFDEC;
+  color: #fffdec;
 }
 
 .side li {
-  color: #86A788;
+  color: #86a788;
 }
 
 .best-seller p {
-  color: #86A788;
+  color: #86a788;
 }
 
 article {
-  color: #86A788;
+  color: #86a788;
 }
 
-.footer-left, .footer-right {
-  color: #FFFDEC;
+.footer-left,
+.footer-right {
+  color: #fffdec;
 }
+.panier {
+display: flex;
+justify-content: center;
+margin: 5px;
+padding: 2.5em;
+}
+
+.panier button {
+  padding: 1.5em;
+  border: none;
+  background-color: #86a788;
+  color: #fffdec;
+  border-radius: 5px;
+}
+
 
