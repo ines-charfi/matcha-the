@@ -4,116 +4,176 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* Styles généraux */
 body {
     font-family:'Poppins';
-    background-image: url("./images/Green\ matcha\ moodboard.jpg");
-    background-size: cover; /* L'image couvre toute la page */
-    background-position: center; /* Centrer l'image */
-    background-attachment: fixed; /* L'image reste fixe lors du défilement */
+    background-image: url("images/Matcha\ aesthetic\ phone\ wallpaper.jpg");
+    background-size: 100%; 
+    background-position: center; 
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+   /* From https://css.glass */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.44);
 }
 
-
+/*....................................*/
 /* Header avec navbar */
 header {
-    background-color: #2f855a;
-    padding: 20px 10px;
-}
-
-.navbar-container {
+    background-color: #86A788;
+    padding: 60px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 30 auto;
+    gap: 20px;
+    border-radius: 5px;
+}
+.compte{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.title h2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: 'poppins';
+    font-size:1.5rem;
+    color: rgb(157, 21, 164);
+    padding: 2%;
+   
+}
+.compte img{
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    animation-delay:0.5s;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+    align-items:center;
+}
+/* Effet au survol */
+.compte img:hover {
+    transform: scale(1.1); 
+    cursor: pointer; 
+}
+
+/* Effet au clic */
+.compte img:active {
+    transform: scale(1.3); 
+    transition: transform 0.1s ease;
+}
+
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: 'poppins';
+    text-align: center;  
+    font-size: 4rem; 
+    font-weight: 500; 
+    text-align: center;
+    color: #6b8e23; 
+    text-transform: uppercase; 
+    letter-spacing: 5px; 
+    text-shadow: 3px 3px 8px rgba(205, 193, 193, 0.2); /
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out
+                
+}
+/*............................................................*/
+
+/* Styles pour la navbar */
+.navbar {
+    color: #d6a5cc;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 150px; 
+    height: 100%; 
+    background-color: #cf86b5;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 2px solid #fff; 
 }
 
 .navbar ul {
-    display: flex;
+   
     list-style-type: none;
+    padding: 0;
+    margin-top: 10px; /* Espace au-dessus des éléments de la liste */
 }
 
 .navbar li {
-    width: 150px;
-    height: 50%;
-    text-align: center;
-    margin: 30px 20px;
-    border: 100px;
-    background-color: rgb(240, 234, 228);
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 2s ease-in-out;
-    transition: transform 0.5s ease;
-    
-  
+    margin: 40px 30px; /* Espacement entre les éléments */
+   
 }
 
 .navbar a {
-    
-    color: rgb(1, 48, 13);
+    gap: 40px;
+    display: block;
+    color: #FFE2E2;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #724dc9;
-}
-
-/* Menu burger */
-.burger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-}
-
-.burger .bar {
-    height: 5px;
-    background-color: white;
-    border-radius: 10px;
-}
-
-.navbar ul {
-    display: flex;
-}
-
-.navbar ul.active {
-    display: block;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    background-color: #2f855a;
+    font-family:'poppins';
+    gap: 50px;
     padding: 20px;
-    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    writing-mode: vertical-rl;
+    align-items: center;
+
 }
 
-.navbar li {
-    margin: 10px 0;
+/* Effet au survol */
+.navbar a:hover {
+    background-color: #e6bdca;
+    color: #111;
 }
 
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 5px;
+    background-color: #413d3d;
+}
+/* Contenu principal (ajouté un padding-left pour ne pas être caché par la navbar) */
 section {
-    padding: 40px 20px;
-    text-align:center;
-    width: 100%;
-    height: 100%;
-    
-
-
+    padding: 20px;
+    margin-left: 220px; /* La marge est égale à la largeur de la navbar pour que le contenu ne soit pas sous elle */
 }
+/*................................................................*/
+/*.....................CSS DE LA PAGE HISTOIRE.......................*/
 
 
-.histoire  h1  {
+.histoire h1  {
     
     justify-content: center;
     text-align: center;
     color: #111b8b;
     font-size: 2em;
+    margin-top: 50px;
     animation: fadeIn 2s ease-in-out;
     transition: transform 0.5s ease; 
    
@@ -125,6 +185,21 @@ section {
     margin-bottom: 15px;
     font-size: 1.1em;
     animation: fadeIn 2s ease-in-out;
+}
+/*...................*/
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   
+
+}
+.item-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
 }
 .valeurs h1  {
     display:flex;
@@ -154,10 +229,7 @@ section {
 .valeurs p:hover {
     transform: translateX(-50px)
 }
-footer p{
-    text-align: center;
-    color: whitesmoke;
-}
+
 
 
  .histoire ul li {
@@ -167,7 +239,6 @@ footer p{
     display:grid;
     justify-content: space-around;
     align-items: center;
-
     background-color: #86A788;
     padding: 12px;
     margin: 10px 0;
@@ -179,109 +250,253 @@ footer p{
 
 /* Quand l'élément est survolé */
 .histoire li:hover {
-    transform: translateX(100px); /* Déplace l'élément de 100px vers la droite */
+    transform: translateX(100px); /* Déplace l'élément vers la droite */
 
 
 }
 
 
-/* Media Queries pour rendre la page responsive */
 
-/* Sur mobile : Les sections prennent toute la largeur */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        gap: 20px;
-    }
+/*............................................................................................................*/
+/* ........................css de la page vente( h1, la grille des images)........................;*/
+/* Mosaïque des produits */
+.produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-    #histoire, #valeurs {
-        flex: none;
-        width: 100%;
-    }
-
-    h1, h2 {
-        font-size: 1.6em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    ul li {
-        font-size: 1em;
-    }
+.produit {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Sur tablette et plus grand : les colonnes restent côte à côte */
-@media (min-width: 769px) {
-    .container {
-        flex-direction: row;
-    }
-
-    .histoire, .valeurs {
-        flex: 1;
-    }
-
-
-h1, h2 {
-    color: rgb(5, 121, 121);
-    margin-bottom: 20px;
-    font-size: 2em;
-    animation: fadeIn 2s ease-in-out;
-}
-}
-/* Animation d'apparition */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.produit:hover {
+    transform: scale(1.05);
 }
 
-/* Footer */
+.produit img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+iframe {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+.title h1{
+    margin-top: 30px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color: #111b8b;
+    background-color: #ddd;
+   
+}
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #4caf50; 
+    margin-top: 15px;
+}
+
+p {
+    text-align: center;
+    font-size: 1em;
+    color: #5f5d68;
+    margin-top: 10px;
+}
+
+.prix {
+   
+    color: #f60;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+/*............................................................................................................*/
+
 footer {
-    background-color: #2f855a;
+    background-color:#86A788;
     color: white;
     text-align: center;
+    border-radius: 5px;
     padding: 20px;
     margin-top: 40px;
+    text-decoration-style: none;
+    list-style-type:none;
+    display: flex;
+    justify-content:space-around; 
+
+}
+ 
+footer p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'poppins';
 }
 
-/* Media Queries pour rendre la page responsive */
 
-/* Mobile */
+
+.information li {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0;
+    gap: 30px;
+    list-style-type: none;
+    text-decoration: solid;
+    color: #0e5421;
+    font-family: 'poppins';
+    font-style:solid;
+}
+
+
+/* Zone de texte */
+.footer-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+  
+}
+
+.footer-center::placeholder {
+    color: #dfc7d1;
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Bouton Submit */
+.submit-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: hsl(152, 58%, 86%);
+    color: rgb(57, 4, 65);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #cf86b5;
+}
+.information li a{
+    text-decoration: none;
+    color: #555; 
+    font-family: 'poppins';
+    font-size: large;
+
+}
+
+
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #d6a5cc; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 400px; 
+    margin: 20px auto; 
+    font-family: 'poppins'; 
+    margin-left: 200px; 
+    animation-delay: 0.6s;
+    transition: transform 0.3s ease-in-out;
+    cursor:grab;
+    text-decoration: none;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.information:hover {
+    transform: scale(1.05);
+}
+
+
+
+.information h3 {
+    font-size: 1rem; 
+    color: #f1f5f2; 
+    margin-bottom: 10px; 
+    text-align: center;
+}
+
+.information p {
+    font-size: 1rem; 
+    color: #555; 
+    margin: 5px 0;
+    text-align: center; 
+}
+
+.information img {
+    width: 50px; 
+    height: auto; 
+    display: block;
+    margin: 10px auto; 
+    border-radius: 50%;
+}
+
+.information p:last-of-type {
+    font-weight: bold; 
+    color: blue; 
+}
+
+/*....................................*/
+/*bas de page...........*/
+.bas-de-page p{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color:#710c56;
+    font-size: x-large;
+
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    .navbar ul {
-        display: none;
-        width: 100%;
-    }
-
-    .burger {
-        display: flex;
-    }
-
-    h1, h2 {
-        font-size: 1.5em;
-    }
-
-    section {
-        padding: 30px 10px;
+    .navbar ul li a{
+      diplay :none;
     }
 }
-
-/* Tablette et plus grand */
-@media (max-width: 1200px) {
-    .navbar ul {
-        justify-content: space-around;
-    }
-}
-
-/* Grand écran */
-@media (min-width: 1201px) {
-    .navbar ul {
-        justify-content: space-evenly;
-    }
-}
+ .histoire li{
+    display: flex;
+    flex-direction: column;
+ }
+ .box .item-box li .information .valeurs .bas-de-page {
+    display: flex;
+    flex-direction: column;
+ }

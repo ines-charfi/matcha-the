@@ -1,0 +1,452 @@
+
+/* RESET pour éviter les styles par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family:'Poppins';
+    background-image: url("./images/Green\ matcha\ moodboard.jpg");
+    background-size: 75%; 
+    background-position: center; 
+    background-attachment: fixed; 
+    backdrop-filter: blur(auto);
+}
+
+/*....................................*/
+/* Header avec navbar */
+header {
+    background-color: #b8c3bd;
+    padding: 30px auto;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color: white;
+    text-shadow:0px 0px 10px cyan;
+    text-shadow:0px 0px 20px cyan;
+    text-shadow :0px 0px 40px cyan;
+    text-shadow: 0px 0px 80px cyan;
+                
+}
+
+
+
+
+/* Styles pour la navbar */
+.navbar {
+    position: fixed; /* Position fixe pour qu'elle reste toujours visible */
+    top: 0;
+    left: 0;
+    width: 170px; /* Largeur de la navbar */
+    height: 100%; /* Prendre toute la hauteur de la page */
+    background-color: #2f855a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Alignement des éléments en colonne */
+    justify-content: flex-start;
+    border-right: 2px solid #fff; /* Bordure pour séparer la navbar du contenu */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px; /* Espace au-dessus des éléments de la liste */
+}
+
+.navbar li {
+    margin: 10px 0; /* Espacement entre les éléments */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol */
+.navbar a:hover {
+    background-color: #c3f17a;
+    color: #111;
+}
+
+/* Contenu principal (ajouté un padding-left pour ne pas être caché par la navbar) */
+section {
+    padding: 20px;
+    margin-left: 220px; /* La marge est égale à la largeur de la navbar pour que le contenu ne soit pas sous elle */
+}
+/*................................*/
+
+
+.histoire  h1  {
+    
+    justify-content: center;
+    text-align: center;
+    color: #111b8b;
+    font-size: 2em;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; 
+   
+}
+
+.histoire  p{
+    color:rgb(9, 2, 50);
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    animation: fadeIn 2s ease-in-out;
+}
+/*...................*/
+box{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   
+
+}
+.item-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.valeurs h1  {
+    display:flex;
+    width: 100%;
+    height: auto;
+   border: #ddecde;
+   border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    color: #111b8b;
+    font-size: 2em;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; 
+   
+}
+.valeurs p {
+    width: 100%;
+    height: 100%;
+    background-color: #ddecde;
+    box-sizing: content-box;
+    border-radius: 5px;
+    box-shadow: gray;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; 
+
+}
+.valeurs p:hover {
+    transform: translateX(-50px)
+}
+footer p{
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+ .histoire ul li {
+    text-align: justify;
+    height: 50%;
+    width: 30%;
+    display:grid;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #86A788;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease; /* Applique la transition sur le transform */
+}
+
+/* Quand l'élément est survolé */
+.histoire li:hover {
+    transform: translateX(100px); /* Déplace l'élément vers la droite */
+
+
+}
+/*............................................................................................................*/
+/* css de la page vente( h1, la grille des images)*/
+/* Mosaïque des produits */
+.produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.produit {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.produit:hover {
+    transform: scale(1.05);
+}
+
+.produit img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.title h1{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color: #111b8b;
+    background-color: #ddd;
+   
+}
+h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #4caf50; 
+    margin-top: 15px;
+}
+
+p {
+    text-align: center;
+    font-size: 1em;
+    color: #5f5d68;
+    margin-top: 10px;
+}
+
+.prix {
+   
+    color: #f60;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+/*............................................................................................................*/
+
+footer {
+    background-color: #2f855a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/*............................*/
+/* Style général du footer */
+footer {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .information {
+    margin-bottom: 30px;
+}
+
+footer h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 10px 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+
+footer ul li a:hover {
+    color: #00aaff;
+}
+
+footer .footer-center {
+    text-align: center;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer textarea.footer-message {
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+footer button.submit-button {
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer button.submit-button:hover {
+    background-color: #0077aa;
+}
+
+footer img {
+    max-width: 50px;
+    margin-top: 10px;
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+/* Media Queries pour rendre le footer responsive */
+
+/* Tablettes et petits écrans de bureau */
+@media (max-width: 1024px) {
+    footer {
+        padding: 30px 15px;
+    }
+
+    footer h3 {
+        font-size: 1.4em;
+    }
+
+    footer ul li a {
+        font-size: 1.1em;
+    }
+
+    footer form {
+        width: 80%;
+    }
+
+    footer .footer-center {
+        padding: 0 10px;
+    }
+
+    footer img {
+        max-width: 40px;
+    }
+
+    footer p {
+        font-size: 1.1em;
+    }
+}
+
+/* Écrans de taille mobile */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 10px;
+    }
+
+    footer .information {
+        margin-bottom: 20px;
+    }
+
+    footer h3 {
+        font-size: 1.2em;
+    }
+
+    footer ul {
+        text-align: center;
+    }
+
+    footer ul li {
+        display: inline-block;
+        margin: 10px 15px;
+    }
+
+    footer ul li a {
+        font-size: 1em;
+    }
+
+    footer form {
+        width: 90%;
+    }
+
+    footer textarea.footer-message {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    footer button.submit-button {
+        padding: 8px 15px;
+    }
+
+    footer img {
+        max-width: 40px;
+    }
+
+    footer p {
+        font-size: 1em;
+    }
+}
+
+/* Écrans de petite taille (mobiles très petits) */
+@media (max-width: 480px) {
+    footer {
+        padding: 15px 5px;
+    }
+
+    footer h3 {
+        font-size: 1.1em;
+    }
+
+    footer ul li {
+        margin: 8px 0;
+    }
+
+    footer ul li a {
+        font-size: 0.9em;
+    }
+
+    footer form {
+        width: 100%;
+    }
+
+    footer textarea.footer-message {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    footer button.submit-button {
+        padding: 6px 12px;
+    }
+
+    footer img {
+        max-width: 35px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+
+
+
