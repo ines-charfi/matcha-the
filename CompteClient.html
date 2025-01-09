@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Compte-Client</title>
-    <link rel="stylesheet" href="MatchaA.css">
-</head>
-<body>
+    <link rel="stylesheet" href="MatchaA.css" />
+  </head>
+  <body>
     <header>
       <nav class="one">
         <ul class="crossbar">
           <li>Accueil</li>
-          <li>Titre</li>
-          <li>Compte Nom</li>
+          <li>NEO MATCHA</li>
+          <li><p>Compte Nom</p></li>
+          <li><button type="submit">Commande</button></li>
         </ul>
       </nav>
     </header>
@@ -21,15 +22,38 @@
         <div class="sidebar">
           <nav class="two">
             <ul class="side">
-              <li>Commande</li>
+              <li><a href="Commande.html" style="text-decoration: none;">Commande</a></li>
               <li>Profile</li>
-              
             </ul>
           </nav>
         </div>
-      <section class="Compte">
-        <h1>compte</h1>
-      </section>  
+        <section class="Compte">
+          <div class="titre">
+            <h2>Compte</h2>
+          </div>
+          <div class="form1">
+            <form action="/soumettre" method="POST">
+              <label for="nom">Nom :</label>
+              <input type="text" id="nom" name="nom" required />
+              <br /><br />
+
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email" required />
+              <br /><br />
+
+              <label for="adresse">Adresse :</label>
+              <textarea
+                id="adresse"
+                name="adresse"
+                rows="2"
+                required
+              ></textarea>
+              <br /><br />
+
+              <button type="submit">Enregistrer</button>
+            </form>
+          </div>
+        </section>
       </section>
       <footer>
         <section class="footer1">
@@ -49,7 +73,7 @@
           <div class="footer-right">
             <ul class="adress">
               <h3>Coordonnée</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>8 rue Hozier 13002 Marseille</p>
             </ul>
           </div>
         </section>
