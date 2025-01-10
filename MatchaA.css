@@ -229,7 +229,7 @@ form {
 
 a:visited {
   color:#86a788;
-  text-decoration: NONE;
+  text-decoration: none;
 }
 
 
@@ -247,4 +247,10 @@ a:visited {
   background-color: #86a788;
   color: #fffdec;
   border-radius: 5px;
+}
+.nav-footer a:visited{
+  color: #fffdec;
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
 }
