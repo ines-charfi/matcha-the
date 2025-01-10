@@ -10,6 +10,35 @@
           };
     }
 }
+/* Partie Header */
+.one {
+    display: flex;
+    background-color: #86a788;
+    text-align: center;
+    padding: 10px;
+}
+.one-apropos {
+    background-color: rgba(115, 172, 153, 0.5);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: auto;
+    overflow-x: hidden;
+}
+.menu-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    gap: 20px;
+}
+.menu-logo button {
+    padding: 1.5em;
+    border: none;
+    background-color: #fffdec;
+    color: #86a788;
+    border-radius: 5px;
+  }
 
 /* Section "à propos" */
 .body {
@@ -19,7 +48,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('images/fond3.jpg');
+    background-image: url('images/rose-vert.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -41,10 +70,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/fond3.jpg');
+    background-image: url('images/rose-vert.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.4px);
+    -webkit-backdrop-filter: blur(10.4px);
 }
 .grid-conteneur {
     display: grid;
@@ -53,7 +88,7 @@
     padding: 20px;
     width: 80%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 60px auto 30px auto; /* modif */
 }
 .grid-item {
     background: rgba(115, 172, 153, 0.5);
@@ -82,12 +117,12 @@
     grid-row: 2;
     background-color: rgba(115, 172, 153, 0.5);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     margin-top: auto; /* Place le footer en bas */
 }
 
 .engagements h2 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #fffdec;
 }
 
@@ -110,6 +145,9 @@
 .formulaire-texte {
     width: 45%;
     text-align: center;
+}
+.formulaire-texte p {
+    color: #86a788;
 }
 .formulaire-contact form {
     width: 80%; /* ajout */
@@ -230,6 +268,12 @@
 }
 .liste-grid a {
     line-height: 0;
+    color: #86a788;
+}
+.liste-grid p {
+    color: #86a788;
+}
+.liste-grid h3 {
     color: #86a788;
 }
 .liste li a {
