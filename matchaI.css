@@ -6,6 +6,7 @@
     box-sizing: border-box;
     overflow-x: hidden;
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Styles généraux */
 body {
@@ -80,10 +81,10 @@ h1{
     align-content: center;
     font-family: 'poppins';
     text-align: center;  
-    font-size: 4rem; 
+    font-size: 2em; 
     font-weight: 500; 
     text-align: center;
-    color: #6b8e23; 
+    color: #e7eae2; 
     text-transform: uppercase; 
     letter-spacing: 5px; 
     text-shadow: 3px 3px 8px rgba(205, 193, 193, 0.2); /
@@ -95,8 +96,8 @@ h1{
 
 /* Styles pour la navbar */
 .navbar {
-    color: #d6a5cc;
-    position: fixed; 
+   
+    position: absolute; 
     top: 0;
     left: 0;
     width: 150px; 
@@ -361,37 +362,23 @@ footer p{
 }
 
 
-/* Zone de texte */
-.footer-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.footer-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+/* formulaire */
+footer form textarea {
     width: 100%;
-    height: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 14px;
+    padding: 12px;
+    margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    text-align: center;
-  
 }
 
-.footer-center::placeholder {
-    color: #dfc7d1;
-}
 form{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+form::placeholder {
+    color: #dfc7d1;
 }
 
 /* Bouton Submit */
@@ -476,6 +463,7 @@ form{
 }
 
 /*....................................*/
+
 /*bas de page...........*/
 .bas-de-page p{
     display: flex;
@@ -487,16 +475,125 @@ form{
 }
 
 /* Media Queries */
+@media (max-width: 1200px) {
+    /* Pour les grands écrans comme les tablettes et les petits écrans d'ordinateur */
+    .navbar {
+        padding: 10px 50px;
+    }
+
+    .nav ul {
+        gap: 15px;
+    }
+
+    .histoire h1 {
+        font-size: 1rem;
+    }
+
+    .box {
+        gap: 15px;
+    }
+
+    .item-box {
+        flex-direction: column;
+        justify-items: center;
+}
+.footer .information .histoire .box{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+}
 @media (max-width: 768px) {
-    .navbar ul li a{
-      diplay :none;
+    /* Pour les tablettes et smartphones */
+    .navbar {
+        display:none;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .histoire h1 {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+
+    .box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    /* Menu Burger - visible sur mobile */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav {
+        display: none; /* Masquer le menu sur mobile */
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #cf86b5;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    /* Lorsque le menu burger est activé */
+    #menu-toggle:checked + .nav {
+        display: flex;
+    }
+
+    .compte img {
+        max-width: 80%;
+        height: auto;
     }
 }
- .histoire li{
-    display: flex;
-    flex-direction: column;
- }
- .box .item-box li .information .valeurs .bas-de-page {
-    display: flex;
-    flex-direction: column;
- }
+}
+@media (max-width: 480px) {
+    /* Pour les petits écrans (smartphones) */
+    .navbar {
+        display: none;
+    }
+
+    .nav a {
+        font-size: 16px;
+    }
+
+    .histoire h1 {
+        font-size: 1rem;
+    }
+
+    .box {
+        gap: 10px;
+    }
+
+    .item-box {
+        flex: 1 1 100%; /* Les éléments prennent toute la largeur */
+    }
+
+    .footer form textarea {
+        font-size: 14px;
+    }
+
+    .bas-de-page {
+        font-size: 14px;
+    }
+}
+
